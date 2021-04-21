@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:third_eye/view/homepage.dart';
 import 'package:third_eye/view/infopage.dart';
@@ -8,6 +9,8 @@ bool _firstTime = false;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   await checkFirstTime();
   runApp(
     MyApp(),
