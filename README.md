@@ -24,9 +24,7 @@ It uses AI and ML to describe the image captured by camera in human understandab
 - Download the app from playstore [here](https://play.google.com/store/apps/details?id=com.ellipsedevelopers.thirdeye)
 
 ## Screenshot!
-
-[screenshot](https://user-images.githubusercontent.com/82890512/118093648-5fbf6f80-b3eb-11eb-9e90-1d3ee504658c.png)
-
+<img src="https://user-images.githubusercontent.com/82890512/118093648-5fbf6f80-b3eb-11eb-9e90-1d3ee504658c.png" height="800">
 
 
 Feedback is welcome! Contact me for any info.
