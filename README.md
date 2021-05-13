@@ -1,16 +1,32 @@
-# third_eye
+# Third Eye
 
-A new Flutter project.
+It uses AI and ML to describe the image captured by camera in human understandablel sentences. It also identifies the text present in image and reads it. This can be really helpful for blind people.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+1. A beautiful, minimalist user interface with subtle animations.
+2. It uses Azure Cognitive Services to identify images
 
-A few resources to get you started if this is your first Flutter project:
+## Dependencies
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- camera: 0.7.0+2
+- cupertino_icons: ^1.0.0
+- http: 0.12.2
+- flutter_spinkit: 4.1.2+1
+- flutter_tts: 2.1.0
+- shared_preferences: 0.5.12+4
+- mdi: 4.0.0
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Run the project
+
+- With Flutter installed, clone project and run `flutter run --release` in that directory,
+  or
+- Download the app from playstore [here](https://play.google.com/store/apps/details?id=com.ellipsedevelopers.thirdeye)
+
+## Screenshot!
+
+[screenshot](https://user-images.githubusercontent.com/82890512/118093648-5fbf6f80-b3eb-11eb-9e90-1d3ee504658c.png)
+
+
+
+Feedback is welcome! Contact me for any info.
