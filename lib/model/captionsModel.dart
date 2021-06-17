@@ -1,13 +1,13 @@
 import 'package:flutter/foundation.dart';
 
 class Captions {
-  String _text;
-  double _confidence;
+  String? _text;
+  double? _confidence;
 
-  String get text => _text;
-  double get confidence => _confidence;
+  String? get text => _text;
+  double? get confidence => _confidence;
 
-  Captions({@required String text, @required double confidence}) {
+  Captions({required String? text, required double confidence}) {
     this._text = text;
     this._confidence = confidence;
   }

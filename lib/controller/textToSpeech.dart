@@ -1,11 +1,11 @@
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:third_eye/util/enum.dart';
 
-class TextToSpeech{
+class TextToSpeech {
   FlutterTts _flutterTts = FlutterTts();
   TtsState _ttsState = TtsState.stopped;
   dynamic languages;
-  String language;
+  String? language;
   double volume = 0.5;
   double pitch = 1.0;
   double rate = 0.5;
@@ -33,7 +33,7 @@ class TextToSpeech{
     print(language);
   }
 
-  Future speak(String text) async {
+  Future speak(String? text) async {
     await _flutterTts.setVolume(volume);
     await _flutterTts.setSpeechRate(rate);
     await _flutterTts.setPitch(pitch);

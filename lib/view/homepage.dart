@@ -18,8 +18,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   TextToSpeech _tts = TextToSpeech();
   ImageType _imageType = ImageType.image;
-  List<CameraDescription> cameras;
-  CameraController controller;
+  late List<CameraDescription> cameras;
+  CameraController? controller;
   bool _isloading = true;
   bool _reqSent = false;
   final GlobalKey<ScaffoldState> _scaffoldkey = new GlobalKey<ScaffoldState>();
@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
     return WillPopScope(
       onWillPop: () {
         exit(0);
-      },
+      } as Future<bool> Function()?,
       child: SafeArea(
         child: Scaffold(
           backgroundColor: Colors.black,
@@ -68,7 +68,7 @@ class _HomePageState extends State<HomePage> {
               ? Stack(
                   children: [
                     GestureDetector(
-                      child: CameraPreview(controller),
+                      child: CameraPreview(controller!),
                       onDoubleTap: _sendRequest,
                       onHorizontalDragUpdate: (details) {
                         // Note: Sensitivity is integer used when you don't want to mess up vertical drag
@@ -109,11 +109,11 @@ class _HomePageState extends State<HomePage> {
   void getCameras() async {
     cameras = await availableCameras();
     controller = CameraController(cameras[0], ResolutionPreset.max);
-    controller.initialize().then((_) {
+    controller!.initialize().then((_) {
       if (!mounted) {
         return;
       }
-      controller.lockCaptureOrientation(DeviceOrientation.portraitUp);
+      controller!.lockCaptureOrientation(DeviceOrientation.portraitUp);
       setState(() {
         _isloading = false;
       });
@@ -133,7 +133,7 @@ class _HomePageState extends State<HomePage> {
           _reqSent = true;
         });
         HapticFeedback.heavyImpact();
-        XFile file = await controller.takePicture();
+        XFile file = await controller!.takePicture();
         print(file.path);
 
         Captions captions =

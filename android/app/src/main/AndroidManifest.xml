@@ -1,4 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.third_eye">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.ellipsedevelopers.thirdeye">
   <uses-permission android:name="android.permission.INTERNET"/>
   <uses-permission android:name="android.permission.VIBRATE"/>
   <application android:name="io.flutter.app.FlutterApplication" android:label="THIRD EYE" android:icon="@mipmap/ic_launcher">
