@@ -1,5 +1,3 @@
-import 'package:flutter/foundation.dart';
-
 class Captions {
   String? _text;
   double? _confidence;

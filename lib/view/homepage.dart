@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
     return WillPopScope(
       onWillPop: () {
         exit(0);
-      } as Future<bool> Function()?,
+      },
       child: SafeArea(
         child: Scaffold(
           backgroundColor: Colors.black,
